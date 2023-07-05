@@ -56,10 +56,6 @@ If you prefer assistance in setting up the server, feel free to contact me, and 
 
 If you need all the data in the database, you can download it from Google Drive using the following link: [Gdrive](https://drive.google.com/drive/u/1/folders/1-PMDXtoVcRWZcoqAoYP5Zzs2fI1SlkHo). This file contains NYSE quotes on daily charts since May 9, 1983. It is updated monthly.
 
-## Usage
-
-Once PostgreSQL, Python, and the dependencies are set up, the server will run fully automated, requiring no daily manual monitoring. Integration with Telegram allows for monitoring the server and receiving daily messages with all the quotes fully automated.
-
 ## Dependencies
 
 Make sure to install the following dependencies:
@@ -72,6 +68,10 @@ pip install psycopg2
 pip install telegram
 pip install tqdm
 ```
+
+## Usage
+
+Once PostgreSQL, Python, and the dependencies are set up, the server will run fully automated, requiring no daily manual monitoring. Integration with Telegram allows for monitoring the server and receiving daily messages with all the quotes fully automated.
 
 ## Contact Information
 
