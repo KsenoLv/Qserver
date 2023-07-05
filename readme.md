@@ -41,13 +41,20 @@ Please note that web scraping should be used responsibly and within legal and et
 
 ## Step-by-Step Guide
 
-For a detailed guide on setting up your personal server with quotes, visit [www.psql.pro](https://psql.pro/category/server/).
+For a detailed guide on setting up your personal server with quotes, visit:
 
-If you prefer assistance in setting up the server, feel free to contact me, and I can help you for a small reward. Contact information is provided at the bottom of this document.
+1 - [Server set up – roadmap.](https://psql.pro/server-set-up-roadmap/)
+2 - [Server set up – python on Ubuntu with cron.](https://psql.pro/python-on-ubuntu-with-cron/)
+3 - [Server set up – SQL DB part.](https://psql.pro/server-set-up-sql-part/)
+4 - [Server set up – SQL requests.](https://psql.pro/server-set-up-sql-requests/)
+5 - [Market Data with Python and Beautiful Soup.](https://psql.pro/market-data-with-python-and-beautifulsoup/)
+6 - [DATA scraping with Python scripts (Pandas).](https://psql.pro/data-parsing-with-python-scripts/)
+
+If you prefer assistance in setting up the server, feel free to contact me, and I can help you for a small reward. Contact information is provided at the bottom of this document or in my web page: www.psql.pro
 
 ## Download
 
-If you need all the data in the database, you can download it from Google Drive using the following link: [Gdrive]([www...](https://drive.google.com/drive/u/1/folders/1-PMDXtoVcRWZcoqAoYP5Zzs2fI1SlkHo)). This file contains NYSE quotes on daily charts since May 9, 1983. It is updated monthly.
+If you need all the data in the database, you can download it from Google Drive using the following link: [Gdrive](https://drive.google.com/drive/u/1/folders/1-PMDXtoVcRWZcoqAoYP5Zzs2fI1SlkHo). This file contains NYSE quotes on daily charts since May 9, 1983. It is updated monthly.
 
 ## Usage
 
@@ -66,8 +73,10 @@ pip install telegram
 pip install tqdm
 ```
 
-## License
-
-Specify the license under which the project is distributed. If you're unsure about licensing, you may want to consult with a legal professional or refer to resources that provide guidance on open-source licenses.
-
 ## Contact Information
+
+I am in Latvia, Riga.
+Phone: +371 29720407
+Email: ksenofontov.mihail@gmail.com
+Telegram: https://t.me/psqlpro
+WhatsApp: https://wa.me/+37129720407
