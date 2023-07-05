@@ -45,8 +45,8 @@ For a detailed guide on setting up your personal server with quotes, visit:
 
 1 - [Server set up – roadmap.](https://psql.pro/server-set-up-roadmap/)<br>
 2 - [Server set up – python on Ubuntu with cron.](https://psql.pro/<br>python-on-ubuntu-with-cron/)<br>
-3 - [Server set up – SQL DB part.](https://psql.pro/server-set-up-sql-part/)<br>
-4 - [Server set up – SQL requests.](https://psql.pro/server-set-up-sql-requests/)<br>
+3 - [Server set up – PlpgSQL DB part.](https://psql.pro/server-set-up-sql-part/)<br>
+4 - [Server set up – PlpgSQL requests.](https://psql.pro/server-set-up-sql-requests/)<br>
 5 - [Market Data with Python and Beautiful Soup.](https://psql.pro/market-data-with-python-and-beautifulsoup/)<br>
 6 - [DATA scraping with Python scripts (Pandas).](https://psql.pro/data-parsing-with-python-scripts/)
 
