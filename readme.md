@@ -8,7 +8,7 @@ To set up the project, you will need a VPS (Virtual Private Server) running Ubun
 
 Clone the repository to your VPS server or copy the files from your local machine. Make sure to update the folder paths and file names in the script as needed.
 
-```git clone <repository_url>```
+```git clone https://github.com/KsenoLv/Qserver```
 
 ## Configuration
 
