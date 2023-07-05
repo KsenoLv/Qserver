@@ -43,11 +43,11 @@ Please note that web scraping should be used responsibly and within legal and et
 
 For a detailed guide on setting up your personal server with quotes, visit:
 
-1 - [Server set up – roadmap.](https://psql.pro/server-set-up-roadmap/)
-2 - [Server set up – python on Ubuntu with cron.](https://psql.pro/python-on-ubuntu-with-cron/)
-3 - [Server set up – SQL DB part.](https://psql.pro/server-set-up-sql-part/)
-4 - [Server set up – SQL requests.](https://psql.pro/server-set-up-sql-requests/)
-5 - [Market Data with Python and Beautiful Soup.](https://psql.pro/market-data-with-python-and-beautifulsoup/)
+1 - [Server set up – roadmap.](https://psql.pro/server-set-up-roadmap/)<br>
+2 - [Server set up – python on Ubuntu with cron.](https://psql.pro/<br>python-on-ubuntu-with-cron/)<br>
+3 - [Server set up – SQL DB part.](https://psql.pro/server-set-up-sql-part/)<br>
+4 - [Server set up – SQL requests.](https://psql.pro/server-set-up-sql-requests/)<br>
+5 - [Market Data with Python and Beautiful Soup.](https://psql.pro/market-data-with-python-and-beautifulsoup/)<br>
 6 - [DATA scraping with Python scripts (Pandas).](https://psql.pro/data-parsing-with-python-scripts/)
 
 If you prefer assistance in setting up the server, feel free to contact me, and I can help you for a small reward. Contact information is provided at the bottom of this document or in my web page: www.psql.pro
