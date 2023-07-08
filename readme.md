@@ -21,7 +21,7 @@ Clone the repository to your VPS server or copy the files from your local machin
 
 - **Telegram.py:** Server monitoring via Telegram.
 
-### SQL folderr
+### SQL folder
 
 - **Tables.sql:** Scripts for database tables.
 
