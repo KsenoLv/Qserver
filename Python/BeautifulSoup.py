@@ -183,7 +183,7 @@ def insert_data_to_postgresql(data, ticker, cursor):
 
 if __name__ == "__main__":
     # Read tickers from the file
-    ticker_file = r"/root/Server/data/OUT/nyse_tickers.txt"
+    ticker_file = r"/path/nyse_tickers.txt"
     with open(ticker_file, 'r') as file:
         tickers = [line.strip() for line in file if line.strip()]
 
