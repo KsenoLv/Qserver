@@ -176,23 +176,25 @@ def insert_data_to_postgresql(data, ticker, cursor):
                 """,
                 (ticker, convert_yahoo_date(row[0]), row[1], row[2], row[3], row[4], row[5], row[6])
             )
-            conn.commit()
+            conn.commit()  # Commit after each successful insertion
         except psycopg2.Error as e:
             print(f"Error inserting data for ticker {ticker}: {e}")
+            conn.rollback()  # Rollback to avoid affecting subsequent tickers
 
 if __name__ == "__main__":
     # Read tickers from the file
-    ticker_file = r"/YOUR_FILE_PATH//nyse_tickers.txt"
+    ticker_file = r"/root/Server/data/OUT/nyse_tickers.txt"
     with open(ticker_file, 'r') as file:
         tickers = [line.strip() for line in file if line.strip()]
 
     # Database connection details
-    db_host = "000.000.000.00"
-    db_port = "0000"
-    db_name = "ddd"
-    db_user = "ppp"
-    db_password = "111"
+    db_host = ""
+    db_port = ""
+    db_name = ""
+    db_user = ""
+    db_password = ""
 
+    # Initialize the database connection outside the loop
     conn = psycopg2.connect(
         host=db_host,
         port=db_port,
@@ -216,8 +218,24 @@ if __name__ == "__main__":
             insert_data_to_postgresql(data, ticker, cursor)
         time.sleep(2)
 
-    conn.commit()
+        # Reset the cursor and commit changes for each ticker
+        cursor.close()
+        conn.commit()
+        conn.close()
+
+        # Reinitialize the database connection for the next ticker
+        conn = psycopg2.connect(
+            host=db_host,
+            port=db_port,
+            dbname=db_name,
+            user=db_user,
+            password=db_password
+        )
+        cursor = conn.cursor()
+
+    # Close the cursor and connection after processing all tickers
     cursor.close()
     conn.close()
 
     print("Data scraping and insertion completed successfully!")
+
