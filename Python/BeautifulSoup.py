@@ -105,13 +105,14 @@ from datetime import datetime, timedelta
 import time
 import psycopg2
 from tqdm import tqdm
+import json
 
 def date_to_unix_timestamp(date_str):
     date = datetime.strptime(date_str, "%Y-%m-%d")
     return int(date.timestamp())
 
 def convert_yahoo_date(yahoo_date):
-    date_obj = datetime.strptime(yahoo_date, "%b %d, %Y")
+    date_obj = datetime.strptime(yahoo_date, "%b %d %Y")
     return date_obj.strftime("%Y-%m-%d")
 
 def scrape_yahoo_finance_data(ticker, start_date, end_date):
@@ -169,6 +170,8 @@ def scrape_yahoo_finance_data(ticker, start_date, end_date):
 def insert_data_to_postgresql(data, ticker, cursor):
     for row in data:
         try:
+            # Remove commas from numeric values
+            row = [value.replace(',', '') if isinstance(value, str) else value for value in row]
             cursor.execute(
                 """
                 INSERT INTO test.test_p (Ticker, Date, Open, High, Low, Close, Adj_Close, Vol)
@@ -183,16 +186,19 @@ def insert_data_to_postgresql(data, ticker, cursor):
 
 if __name__ == "__main__":
     # Read tickers from the file
-    ticker_file = r"/path/nyse_tickers.txt"
+    ticker_file = r"/root/Server/data/OUT/nyse_test.txt"
     with open(ticker_file, 'r') as file:
         tickers = [line.strip() for line in file if line.strip()]
 
     # Database connection details
-    db_host = ""
-    db_port = ""
-    db_name = ""
-    db_user = ""
-    db_password = ""
+    with open('/root/Server/Py/nyse/config.json') as config_file:
+        config = json.load(config_file)
+
+    db_host = config["db_host"]
+    db_port = config["db_port"]
+    db_name = config["db_name"]
+    db_user = config["db_user"]
+    db_password = config["db_password"]
 
     # Initialize the database connection outside the loop
     conn = psycopg2.connect(
@@ -238,4 +244,3 @@ if __name__ == "__main__":
     conn.close()
 
     print("Data scraping and insertion completed successfully!")
-
